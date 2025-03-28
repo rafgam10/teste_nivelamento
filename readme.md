@@ -6,9 +6,9 @@ Este teste foi desenvolvido para avaliar suas habilidades em programação, orga
 ## 🎯 Critérios de Avaliação
 Os seguintes critérios serão considerados durante a avaliação do seu teste:
 
-✅ **Conhecimentos fundamentais de programação**
-✅ **Organização e estruturação do código**
-✅ **Boas práticas de desenvolvimento**
+- ✅ **Conhecimentos fundamentais de programação**
+- ✅ **Organização e estruturação do código**
+- ✅ **Boas práticas de desenvolvimento**
 
 ## 💡 Diferenciais Considerados
 Além dos critérios básicos, também são valorizados os seguintes diferenciais:
