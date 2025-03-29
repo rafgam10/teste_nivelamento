@@ -116,4 +116,5 @@ Boa sorte! 🚀
 - [Ambiente_Virtual](https://docs.python.org/pt-br/3.13/tutorial/venv.html)
 - [Introdução ao BeautifulSoup – Raspagem de Dados com Python](https://www.hashtagtreinamentos.com/introducao-ao-beautifulsoup-python)
 - [zipfile — Trabalha com arquivos ZIP](https://docs.python.org/pt-br/3.13/library/zipfile.html)
+- [Docs Pandas](https://pandas.pydata.org/docs/)
 

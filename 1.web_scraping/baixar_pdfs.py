@@ -21,6 +21,7 @@ def baixar():
 
         # Loop para acha os todos os links do html que estão em tag "a"
         for linkIndex in site.find_all('a', href=True):
+            
             file_url = linkIndex['href']
 
             # Filtrado apenas aqueles que tem arquivos PDF:
@@ -29,7 +30,6 @@ def baixar():
 
                 # Verificação para pegar os arquivos com o nome incial 'Anexo':
                 if file_nome.startswith('Anexo'):
-
 
                     # Se o link for relativo, transformar em absoluto:
                     if not file_url.startswith('http'):
@@ -48,6 +48,7 @@ def baixar():
         print("Download Finalizando!")
 
     else:
+        #Caso não ocorra return 404:
         print("Erro ao acessar a paǵina:", resposta.status_code)
 
 

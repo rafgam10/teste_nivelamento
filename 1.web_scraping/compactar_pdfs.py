@@ -13,7 +13,9 @@ def compactar():
 
     # Criando o zip e adiciona apenas os PDF:
     with zipfile.ZipFile(nome_zip, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        
         for arquivo in arquivosPDF:
+            
             if arquivo.endswith('.pdf'):
                 zipf.write(arquivo)
 
