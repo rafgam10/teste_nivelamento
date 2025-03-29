@@ -75,24 +75,24 @@ Boa sorte! 🚀
 
 ```graphql
 📂 teste_nivelamento/
-│── 📂 web_scraping/         # Código relacionado ao download de PDFs
+│── 📂 1.web_scraping/         # Código relacionado ao download de PDFs
 │   ├── baixar_pdfs.py       # Script para baixar os PDFs
 │   ├── compactar_pdfs.py    # Script para compactar os arquivos baixados
 │   ├── requirements.txt     # Dependências necessárias (ex: requests, BeautifulSoup)
 │
-│── 📂 transformacao_dados/  # Código de extração e tratamento de dados
+│── 📂 2.transformacao_dados/  # Código de extração e tratamento de dados
 │   ├── extrair_tabela.py    # Script para extrair tabela do PDF
 │   ├── gerar_csv.py         # Script para salvar os dados em CSV
 │   ├── compactar_csv.py     # Script para compactar o CSV gerado
 │   ├── requirements.txt     # Dependências (ex: pdfplumber, pandas)
 │
-│── 📂 banco_dados/          # Scripts SQL e inserção de dados no banco
+│── 📂 3.banco_dados/          # Scripts SQL e inserção de dados no banco
 │   ├── criar_tabelas.sql    # Scripts para criação de tabelas
 │   ├── importar_dados.py    # Código para importar CSV para o banco
 │   ├── consultas.sql        # Queries analíticas para análise de despesas
 │   ├── requirements.txt     # Dependências (ex: pymysql, psycopg2)
 │
-│── 📂 api/                  # Código do servidor Flask e interface Vue.js
+│── 📂 4.api/                  # Código do servidor Flask e interface Vue.js
 │   ├── app.py               # Servidor Flask
 │   ├── models.py            # Modelos de banco de dados
 │   ├── routes.py            # Definição de rotas da API
