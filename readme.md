@@ -26,39 +26,39 @@ Além dos critérios básicos, também são valorizados os seguintes diferenciai
 ## 📝 Estrutura do Teste
 
 ### **1️⃣ Web Scraping**
-- Acessar o site da ANS.
-- Baixar os arquivos PDF (Anexos I e II).
-- Compactar os arquivos em um único `.zip`.
+- [X] Acessar o site da ANS.
+- [X] Baixar os arquivos PDF (Anexos I e II).
+- [X] Compactar os arquivos em um único `.zip`.
 
 📌 **Tecnologias sugeridas**: `requests`, `BeautifulSoup`, `zipfile`.
 
 ---
 
 ### **2️⃣ Transformação de Dados**
-- Extrair a tabela "Rol de Procedimentos e Eventos em Saúde" do Anexo I.
-- Salvar os dados extraídos em `.csv`.
-- Substituir abreviações conforme legenda do PDF.
-- Compactar o `.csv` gerado.
+- [ ] Extrair a tabela "Rol de Procedimentos e Eventos em Saúde" do Anexo I.
+- [ ] Salvar os dados extraídos em `.csv`.
+- [ ] Substituir abreviações conforme legenda do PDF.
+- [ ] Compactar o `.csv` gerado.
 
 📌 **Tecnologias sugeridas**: `pdfplumber`, `pandas`, `zipfile`.
 
 ---
 
 ### **3️⃣ Banco de Dados**
-- Baixar arquivos de demonstrações contábeis e dados cadastrais das operadoras.
-- Criar estrutura de tabelas no MySQL/PostgreSQL.
-- Importar os dados para o banco de dados.
-- Criar queries para análise de despesas das operadoras.
+- [ ] Baixar arquivos de demonstrações contábeis e dados cadastrais das operadoras.
+- [ ] Criar estrutura de tabelas no MySQL/PostgreSQL.
+- [ ] Importar os dados para o banco de dados.
+- [ ] Criar queries para análise de despesas das operadoras.
 
 📌 **Tecnologias sugeridas**: `MySQL/PostgreSQL`, `pymysql`, `psycopg2`.
 
 ---
 
 ### **4️⃣ API - Desenvolvimento Web**
-- Criar uma API em Flask.
-- Criar rota para busca textual de operadoras.
-- Criar interface web usando Vue.js.
-- Criar coleção no Postman para testes.
+- [ ] Criar uma API em Flask.
+- [ ] Criar rota para busca textual de operadoras.
+- [ ] Criar interface web usando Vue.js.
+- [ ] Criar coleção no Postman para testes.
 
 📌 **Tecnologias sugeridas**: `Flask`, `Flask-RESTful`, `SQLAlchemy`, `Vue.js`, `Postman`.
 
@@ -70,6 +70,8 @@ Além dos critérios básicos, também são valorizados os seguintes diferenciai
 3. Envie o link do repositório conforme solicitado.
 
 Boa sorte! 🚀
+
+## 📂 Estrutura do Projeto
 
 ```graphql
 📂 teste_nivelamento/
@@ -108,4 +110,10 @@ Boa sorte! 🚀
 │── .gitignore               # Arquivos e pastas a serem ignorados no Git
 │── docker-compose.yml        # (Opcional) Arquivo para subir banco e API com Docker
 ```
+
+## 📝 Docs Utilizados
+
+- [Ambiente_Virtual](https://docs.python.org/pt-br/3.13/tutorial/venv.html)
+- [Introdução ao BeautifulSoup – Raspagem de Dados com Python](https://www.hashtagtreinamentos.com/introducao-ao-beautifulsoup-python)
+- [zipfile — Trabalha com arquivos ZIP](https://docs.python.org/pt-br/3.13/library/zipfile.html)
 
