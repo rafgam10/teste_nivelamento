@@ -40,7 +40,7 @@ Além dos critérios básicos, também são valorizados os seguintes diferenciai
 - [ ] Substituir abreviações conforme legenda do PDF.
 - [ ] Compactar o `.csv` gerado.
 
-📌 **Tecnologias sugeridas**: `pdfplumber`, `pandas`, `zipfile`.
+📌 **Tecnologias sugeridas**: `pdfplumber`, `pandas`, `os`, `zipfile`.
 
 ---
 
@@ -82,7 +82,6 @@ Boa sorte! 🚀
 │
 │── 📂 2.transformacao_dados/  # Código de extração e tratamento de dados
 │   ├── extrair_tabela.py    # Script para extrair tabela do PDF
-│   ├── gerar_csv.py         # Script para salvar os dados em CSV
 │   ├── compactar_csv.py     # Script para compactar o CSV gerado
 │   ├── requirements.txt     # Dependências (ex: pdfplumber, pandas)
 │
@@ -117,4 +116,5 @@ Boa sorte! 🚀
 - [Introdução ao BeautifulSoup – Raspagem de Dados com Python](https://www.hashtagtreinamentos.com/introducao-ao-beautifulsoup-python)
 - [zipfile — Trabalha com arquivos ZIP](https://docs.python.org/pt-br/3.13/library/zipfile.html)
 - [Docs Pandas](https://pandas.pydata.org/docs/)
+- [Docs Tabula-py](https://tabula-py.readthedocs.io/en/latest/tabula.html)
 
