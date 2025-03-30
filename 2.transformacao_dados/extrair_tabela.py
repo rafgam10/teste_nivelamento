@@ -1,26 +1,36 @@
-# Importar o comando "read_pdf" do tabula
-from tabula import read_pdf
+import pdfplumber
+import pandas as pd
 import os
 
-#Função para fazer a chamanda no main.py:
-def extrair_tabelas():
+def extrair_tabelas_modulo():
+    # Criar diretório para salvar os arquivos
+    output_dir = "saida"
+    os.makedirs(output_dir, exist_ok=True)
 
-    # Caminho do PDF
-    arquivo_pdf = "Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf"
+    # Caminho do PDF (substitua pelo caminho correto)
+    pdf_path = "Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf"
 
-    # Variável da Pasta local
-    pasta_local = "pasta_prf"
+    def extrair_tabela(pdf_path):
+        dados = []
+        cabecalho = None  # Armazena o cabeçalho para garantir que apareça apenas uma vez
+        
+        with pdfplumber.open(pdf_path) as pdf:
+            for pagina in pdf.pages:
+                tabelas = pagina.extract_tables()
+                for tabela in tabelas:
+                    for i, linha in enumerate(tabela):
+                        if i == 0:  # Primeira linha pode ser cabeçalho
+                            if cabecalho is None:
+                                cabecalho = linha  # Define o cabeçalho apenas uma vez
+                            continue  # Evita adicionar o cabeçalho repetidamente
+                        dados.append(linha)
+        
+        # Criar DataFrame
+        df = pd.DataFrame(dados, columns=cabecalho)
+        return df
 
-    # Fazendo uma verificação se a pasta existe, se não, cria a pasta
-    if not os.path.exists(pasta_local):
-        os.makedirs(pasta_local)
-
-    # Extrai todas as tabelas do PDF para DataFrames
-    tabelas = read_pdf(arquivo_pdf, pages="all", multiple_tables=True)
-
-    # Salva cada tabela extraída em CSV
-    for i, tabela in enumerate(tabelas):
-        caminho_arquivo = os.path.join(pasta_local, f"tabela_extraida.csv")
-        tabela.to_csv(caminho_arquivo, index=False)
-
-    print(f"Tabelas extraídas e salvas na pasta '{pasta_local}' com sucesso!")
+    # Extrair a tabela e salvar em CSV
+    df_tabela = extrair_tabela(pdf_path)
+    csv_path = os.path.join(output_dir, "Rol_de_Procedimentos.csv")
+    df_tabela.to_csv(csv_path, index=False, encoding='utf-8')
+    print(f"Extração concluída! Dados salvos em '{csv_path}'")
