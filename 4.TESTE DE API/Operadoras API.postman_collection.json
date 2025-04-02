@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "b4659b97-866f-4f4d-8015-651a356ac9dc",
+		"name": "Operadoras API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38933534",
+		"_collection_link": "https://rafael-2266.postman.co/workspace/Teste-Node~d055bd79-976e-4518-b808-0f7d841e0065/collection/38933534-b4659b97-866f-4f4d-8015-651a356ac9dc?action=share&source=collection_link&creator=38933534"
+	},
+	"item": [
+		{
+			"name": "Buscar Operadora por Código",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Key",
+						"value": "Content-Type",
+						"type": "text"
+					},
+					{
+						"key": "Value",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/buscar?q=419761",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "419761"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
