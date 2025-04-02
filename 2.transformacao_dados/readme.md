@@ -9,11 +9,12 @@ Ele está dividido em três módulos principais:
 3. **execução principal**: O `main.py` executa os módulos em ordem e informa ao usuário sobre o tempo de execução.
 
 ## Estrutura do Projeto
-```
+```graphql
 /
 |-- main.py
 |-- extrair_tabelas.py
 |-- compactar_csv.py
+|-- requirements.txt (Arquivos para instalar as dependências)
 |-- saida/
     |-- Rol_de_Procedimentos.csv  (Gerado após a extração)
     |-- Teste_seu_nome.zip        (Gerado após a compactação)

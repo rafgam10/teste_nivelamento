@@ -35,32 +35,32 @@ Além dos critérios básicos, também são valorizados os seguintes diferenciai
 ---
 
 ### **2️⃣ Transformação de Dados**
-- [ ] Extrair a tabela "Rol de Procedimentos e Eventos em Saúde" do Anexo I.
-- [ ] Salvar os dados extraídos em `.csv`.
-- [ ] Substituir abreviações conforme legenda do PDF.
-- [ ] Compactar o `.csv` gerado.
+- [X] Extrair a tabela "Rol de Procedimentos e Eventos em Saúde" do Anexo I.
+- [X] Salvar os dados extraídos em `.csv`.
+- [X] Substituir abreviações conforme legenda do PDF.
+- [X] Compactar o `.csv` gerado.
 
 📌 **Tecnologias sugeridas**: `pdfplumber`, `pandas`, `os`, `zipfile`.
 
 ---
 
 ### **3️⃣ Banco de Dados**
-- [ ] Baixar arquivos de demonstrações contábeis e dados cadastrais das operadoras.
-- [ ] Criar estrutura de tabelas no MySQL/PostgreSQL.
-- [ ] Importar os dados para o banco de dados.
-- [ ] Criar queries para análise de despesas das operadoras.
+- [X] Baixar arquivos de demonstrações contábeis e dados cadastrais das operadoras.
+- [X] Criar estrutura de tabelas no MySQL/PostgreSQL.
+- [X] Importar os dados para o banco de dados.
+- [X] Criar queries para análise de despesas das operadoras.
 
-📌 **Tecnologias sugeridas**: `MySQL/PostgreSQL`, `pymysql`, `psycopg2`.
+📌 **Tecnologias sugeridas**: `MySQL/PostgreSQL`.
 
 ---
 
 ### **4️⃣ API - Desenvolvimento Web**
-- [ ] Criar uma API em Flask.
-- [ ] Criar rota para busca textual de operadoras.
-- [ ] Criar interface web usando Vue.js.
-- [ ] Criar coleção no Postman para testes.
+- [X] Criar uma API em Flask.
+- [X] Criar rota para busca textual de operadoras.
+- [X] Criar interface web usando Vue.js.
+- [X] Criar coleção no Postman para testes.
 
-📌 **Tecnologias sugeridas**: `Flask`, `Flask-RESTful`, `SQLAlchemy`, `Vue.js`, `Postman`.
+📌 **Tecnologias sugeridas**: `Flask(flask_cors)`, `Pandas`, `Axios`, `Vue.js`, `Postman`.
 
 ---
 
@@ -79,19 +79,23 @@ Boa sorte! 🚀
 │   ├── baixar_pdfs.py       # Script para baixar os PDFs
 │   ├── compactar_pdfs.py    # Script para compactar os arquivos baixados
 │   ├── requirements.txt     # Dependências necessárias (ex: requests, BeautifulSoup)
+|   ├── readme.md     
 │
 │── 📂 2.transformacao_dados/  # Código de extração e tratamento de dados
 │   ├── extrair_tabela.py    # Script para extrair tabela do PDF
 │   ├── compactar_csv.py     # Script para compactar o CSV gerado
 │   ├── requirements.txt     # Dependências (ex: pdfplumber, pandas)
+|   ├── readme.md     
 │
 │── 📂 3.banco_dados/          # Scripts SQL e inserção de dados no banco
-│   ├── criar_tabelas.sql    # Scripts para criação de tabelas
-│   ├── importar_dados.py    # Código para importar CSV para o banco
-│   ├── consultas.sql        # Queries analíticas para análise de despesas
-│   ├── requirements.txt     # Dependências (ex: pymysql, psycopg2)
+│   ├── demonstracoes_contabeis_2023.sql   # Código SQL para csv 2023 todo
+│   ├── demonstracoes_contabeis_2024.sql   # Código SQL para csv 2024 todo
+│   ├── pesquisa_operadoras_trimestre.sql   # Código com resultado trimestre
+│   ├── pesquisa_operadoras_ano.sql   # Código com resultado ano
+│   ├── download     # Arquivos de uso
+|   ├── Resultados_consultas     # pngs de Resultados
 │
-│── 📂 4.api/                  # Código do servidor Flask e interface Vue.js
+│── 📂 4.TESTE DE API/                  # Código do servidor Flask e interface Vue.js
 │   ├── app.py               # Servidor Flask
 │   ├── models.py            # Modelos de banco de dados
 │   ├── routes.py            # Definição de rotas da API
@@ -99,15 +103,9 @@ Boa sorte! 🚀
 │   │   ├── components/      # Componentes Vue.js
 │   │   ├── App.vue          # Arquivo principal Vue.js
 │   ├── requirements.txt     # Dependências (ex: Flask, Flask-RESTful)
-│
-│── 📂 tests/                # Testes unitários e de integração
-│   ├── test_scraping.py     # Testes para web scraping
-│   ├── test_transformacao.py# Testes para extração e conversão de dados
-│   ├── test_api.py          # Testes da API Flask
-│
+|   ├── readme.md     
 │── README.md                # Instruções para instalação e execução
 │── .gitignore               # Arquivos e pastas a serem ignorados no Git
-│── docker-compose.yml        # (Opcional) Arquivo para subir banco e API com Docker
 ```
 
 ## 📝 Docs Utilizados
